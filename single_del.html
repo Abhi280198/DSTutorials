@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Single_list(Deletion)</title>
+</head>
+<body background="wallpaper.png">
+    
+    <center>
+	    <h1> <br>DELETION</h1><br><br>
+    </center>  
+
+<pre>
+<h2>       Deletion is also a more than one step process.We shall learn with pictorial representation:
+First, locate the target node to be removed, by using searching algorithms.
+<center><img src="C:\Users\hp\Desktop\final\single list\linked_list_deletion_0.jpg" alt="first image"></center>
+The left (previous) node of the target node now should point to the next node of the target node −
+<center><img src="C:\Users\hp\Desktop\final\single list\linked_list_deletion_1.jpg" alt="second image">
+LeftNode.next −> TargetNode.next;</center>
+This will remove the link that was pointing to the target node. 
+Now, using the following code, we will remove what the target node is pointing at.
+<center><img src="C:\Users\hp\Desktop\final\single list\linked_list_deletion_2.jpg" alt="third image">
+TargetNode.next −> NULL;</center>
+We need to use the deleted node. We can keep that in memory otherwise
+we can simply deallocate memory and wipe off the target node completely.
+<center><img src="C:\Users\hp\Desktop\final\single list\linked_list_deletion_3.jpg" alt="fourth image"></center></h2>
+
+<h1>C++ Implementation For Deletion:</h1>
+<h2>
+void deletion()
+{       
+	node *temp, *ptr;
+	int pos;
+	temp=head;
+	if(head==NULL)
+	{
+		cout<<"\n Elements can't be deleted...";
+	}
+	else
+	{
+		cout<<"\n Enter position: ";
+		cin>>pos;
+		for(int i=0;i< pos-1;i++)
+		{
+			ptr=temp;
+			temp=temp->next;
+		}
+		ptr->next=temp->next;
+		temp->next=NULL;
+		cout<<"\n Element deleted:"<< temp->data<< endl;
+		delete temp;
+	}
+}
+</h2>
+
+</pre>
+</body>
+</html>

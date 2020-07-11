@@ -1,0 +1,139 @@
+<html>
+ <body background="wallpaper.png">
+  <h1>Arrays</h1>
+  <hr>
+	<h2>Linear Arrays</h2>
+	<p>
+	   A linear array is a list of finite numbers of elements stored in the memory.
+
+       In a linear array, we can store only homogeneous data elements. 
+
+       Elements of the array form a sequence or linear list that can have the same type of data. 
+
+       Each element of the array is referred by an index set.
+	</p>
+	<hr>
+	<h2>Operations on Arrays</h2>
+	Following are the operations on Linear Array:<br>
+     1.Traversing.<br>
+     2.Searching.<br>
+     3.Insertion.<br>
+     4.Deletion.<br>
+     5.Sorting.<br>
+     6.Merging.<br>
+<hr>
+	
+	<h2>1.Operations on Array:  Traversal</h2>
+	  <p>
+	    Traversal means visiting each element of array exactly once. Used for 
+        processing of array like printing the contents or counting the no. of elements in array.
+	 </p>
+	 <b>Algorithm</b><br>
+	 [initialize counter] set k = LB<br>
+     repeat steps 3 and 4 while k<= UB<br>
+     [visit the element] apply process to a[k]<br>
+     [increase counter] set k = k + 1<br>
+     [end of step 2 loop]<br>
+     exit<br>
+	 <br>
+     <b>Alternative Algorithm (Repeat Until Loop)</b><br>
+     repeat for k = LB to UB<br>
+     Apply process to A[k]<br>
+    [end of loop]<br>
+     exit<br>
+	 <hr>
+	 
+	 <h2>2.Operations on Array: Insertion</h2>
+	 <p>For inserting an element in 1-D array, one has to shift elements one position down.
+	 </p>
+     <b>Algorithm</b><br>
+      temp = number. //number is the no. of elements already present in array.<br>
+      [scan the list for the position of new element]<br>
+      repeat while temp > position //actual in array<br>
+      [ move the last element one position down]<br>
+      array[ temp ] = array [ temp-1]<br>
+      temp = temp – 1<br>
+      [insert the element]<br>
+      array[position] = no<br>
+      [ change no. of information by 1]<br>
+      number = number + 1<br>
+      return<br>
+	  <hr>
+	  
+	  <h2>Operation on  Array: Deletion</h2>
+	  <p>For deleting element in 1-D array the elements have to be shifted position up.
+      </p>
+	  <b>Algorithm</b><br>
+	  [initialization]<br>
+      element = array[position]//keep information of deleted element<br>
+      [make copy of position]<br>
+      temp=position<br>
+     [update the list, number represents no. of items in list]<br>
+     repeat while temp <number-1 //number is no. of element in array<br>
+     array[temp]=array[temp+1]<br>
+     temp= temp+1;<br>
+    [decrease the size of info list by one]<br>
+    number= number –1;<br>
+    exit<br>
+	<hr>
+	
+	<h2>Operation on Array: Searching</h2>
+	<p>Searching means finding an element in an array. It is of two kinds:
+     linear search
+     binary search
+     </p>
+	<b>Linear Search</b><br>
+     repeat steps 2 and 3 while loc<number<br>
+     if array[loc] = item [search for element in array]<br>
+     print “element found at position loc” and exit<br>
+    [end of if structure]<br>
+    set loc = loc + 1<br>
+    [end of step 1 loop]<br>
+     4.if loc>=number<br>
+    display “element not found”<br>
+    exit<br>
+   
+    <b>Binary Search in One dimensional array</b><br>
+     <p>In binary search we take a sorted array. In binary search we split the array into half and compare with the middle element.
+    </p>
+	 <b>Procedure-Binary search</b><br>
+	 A<-sorted array<br>
+	 n<-size of array<br>
+	 x<-value to be searched<br>
+	 set lowerBound=1<br>
+	 set upperBound=n<br>
+	 while x not found<br>
+	 if upperBound<lowerBound<br>
+	 EXIT:x does not exists<br>
+	 set midoint=lowerBound+(upperbound+lowerBound)/2<br>
+	 if A[midpoint]<x;<br>
+	 set lowerBound=midpoint+1<br>
+	 if a[midpoint]>x<br>
+	 set upperBound=midpont-1<br>
+	 if A[midpoint]=1<br>
+     EXIT:x found at location midpoint<br>	 
+	 end while<br>
+	 end procedure<br>
+	 <hr>
+	 
+	
+    <h2>Operation on Array: Sorting</h2><br>
+	<b>SORTING - Algorithm for Bubble Sort</b>
+	repeat steps 2 and 3 for k=1 to n-1<br>
+    set ptr=1 [initialize pass pointer ptr]<br>
+   repeat while ptr <= n-k [executes pass]<br>
+if data[ptr] > data[ptr +1]<br>
+interchange data[ptr] and data[ptr+1]<br>
+b )set ptr= ptr+1<br>
+[end of inner loop]<br>
+[end of step 1 outer loop]<br>
+exit<br>
+<hr>
+	
+	
+	
+
+
+
+ </body>
+</html>

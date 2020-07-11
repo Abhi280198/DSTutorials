@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body background="wallpaper.png">
+<center>
+<h2>Dequeue Operation</h2><br><br>
+<br><center><img src="dequeue.jpg"></center><br><br></center>
+<h4>
+Accessing data from the queue is a process of two tasks − access the data where front is pointing and remove the data after access. The following steps are taken to perform dequeue operation −
+<br><br>
+Step 1 − Check if the queue is empty.
+<br><br>
+Step 2 − If the queue is empty, produce underflow error and exit.
+<br><br>
+Step 3 − If the queue is not empty, access the data where front is pointing.
+<br><br>
+Step 4 − Increment front pointer to point to the next available data element.
+<br><br>
+Step 5 − Return success.
+<br><br>
+</h4>
+<h2>Remove Operation</h2><br><br>
+<h4>Algorithm for dequeue operation<br><br>
+procedure dequeue
+   <pre>
+   if queue is empty
+      return underflow
+   end if
+
+   data = queue[front]
+   front ← front + 1
+   return true
+
+end procedure
+</pre>
+<h2>Implementation of dequeue() in C++ programming language −</h2>
+
+Example
+<pre>
+int dequeue() {
+   if(isempty())
+      return 0;
+
+   int data = queue[front];
+   front = front + 1;
+
+   return data;
+}</pre></h4>
+</body>
+</html>

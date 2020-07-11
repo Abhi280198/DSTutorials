@@ -1,0 +1,145 @@
+body{
+background-repeat:no-repeat;
+background-size:cover;
+background-attachment:fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    float:right;
+}
+
+li a {
+    
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+	  font-size:20px;
+	 font-weight:bold;
+}
+
+li a:hover {
+    
+    color: white;
+}
+li{
+display: inline;
+}
+.d1::first-letter{
+	font-size: 500%;
+}
+.d1{
+font-size:400%;
+}
+
+.d2{
+background-color:red;
+font-size:40px;
+opacity:0.5;
+font-weight:bold;
+padding:70px;
+color:white;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 400px;
+  height: 200px;
+    perspective: 1000px;
+	padding:70px;
+	margin-left:50px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  
+}
+
+.flip-box-front {
+  background-color:black;
+  color: white;
+  opacity:0.7;
+  font-weight:bold;
+  text-align:center;
+
+  
+}
+
+.flip-box-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+  opacity:0.7;
+  font-weight:bold;
+  }
+
+.button {
+    background-color:blue ; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	margin:60px;
+}
+
+h1{
+      animation: type 3s steps(18)forwards;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: consolas;
+      border-right: 4px solid black;
+      width:18;
+    }
+
+    @keyframes type{
+      0%{
+        width: 0ch;
+      }
+      100%{
+        width: 18ch;
+      }
+    }
+
+
+.footer{
+background-color: rgba(255,0,0,0.3);
+width:100%;
+height:200px;
+float:left;
+margin-top:0px;
+
+}
+
+
+.footer-part1{
+width:100%;
+height:200px;
+
+}
+
+.footer-item{
+float:right;
+width:50%;
+height:100%;}

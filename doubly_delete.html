@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doubly_list(deletion)</title>
+</head>
+<body background="wallpaper.png">
+    
+    <center>
+	    <h1> <br>DELETION</h1><br>
+    </center>  
+<pre>
+	<h2>Following code demonstrates the deletion operation of a doubly linked list:
+
+//Deletion of Node By Value
+
+	void doubly::del()
+	{
+		node *ptr,*ptr2;
+		int val;
+		cout<<"Enter value to delete "<< endl;
+		cin>>val;
+		if(head->data==val)
+		{
+			head=head->next;
+			head->prev=NULL;
+		}
+		else
+		{
+			ptr=head;while(ptr!=NULL)
+			{
+				if(ptr->data==val)
+				{
+					ptr2->next=ptr->next;
+					ptr->next->prev=ptr2;
+					break;
+				}
+				ptr2=ptr;
+				ptr=ptr->next;
+			}
+			if(ptr->data!=val)
+			{
+				cout<<"Value not found....!!!"<< endl;
+			}
+			delete(ptr);
+			}
+		}
+	}
+</h2>
+</pre>
+</body>
+</html>

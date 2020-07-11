@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doubly_list(Insertion)</title>
+</head>
+<body background="wallpaper.png">
+    
+    <center>
+	    <h1> <br>INSERTION</h1><br>
+    </center>  
+<pre>
+	<h2>Following code demonstrates the insertion operation of a doubly linked list:
+
+//Creating a Node.
+
+	node* doubly::create()
+	{	
+		node *newnode=new node;
+		cout<<"\n Enter the Value: ";
+		cin>>newnode->data;
+		newnode->prev=NULL;
+		newnode->next=NULL;
+		return newnode;
+	}
+
+//Insert Node At Beginning.
+
+	void doubly::insert_beg()
+	{
+		node *temp=create();
+		if(head==NULL)
+		{
+			head=temp;
+		}
+		else{
+			temp->next=head;
+			head->prev=temp;
+			head=temp;
+		}
+	}
+
+//Insert Node At End.	
+
+	void doubly::insert_end()
+	{
+		node *temp=create();
+		node *ptr;
+		if(head==NULL)
+		{
+			head=temp;
+		}
+		else{
+			ptr=head;
+			while(ptr->next!=NULL)
+			{
+				ptr=ptr->next;
+			}
+			temp->prev=ptr;
+			ptr->next=temp;
+		}
+	}
+
+//Insert Node At a Given Position.
+
+	void doubly::insert_pos()
+	{
+		int pos,i;
+		node *temp=create();
+		node *ptr, *s;
+		if(head==NULL)
+		{
+			head=temp;
+		}
+		else{
+			cout<<"\n Enter Position: ";
+			cin>>pos;
+			ptr=head;
+			for(i=0;i< pos-1;i++)
+			{
+				s=ptr;
+				ptr=ptr->next;
+			}
+			temp->prev=s;
+			temp->next=ptr;
+			s->next=temp;
+			ptr->prev=temp;
+		}
+	}
+</h2>
+</pre>
+</body>
+</html>

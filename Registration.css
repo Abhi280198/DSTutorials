@@ -1,0 +1,75 @@
+	table{
+		
+		
+		margin-top: 3%;
+		border-spacing: 20px;
+
+	}
+		
+			/* Full-width input fields */
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 2%;
+
+
+}
+input[type=button] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 4px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 2%;
+    background-color: black;
+	color:grey;
+}
+
+input:hover {
+    opacity: 0.7;
+}
+
+label{
+	font-family: "calibri";
+	font-size: 25px;
+}
+h1{
+	align-content: center;
+	
+}
+
+body{
+background-repeat:no-repeat;
+background-size:cover;
+background-attachment:fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    float:right;
+}
+
+li a {
+    
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+	font-size:20px;
+	font-weight:bold;
+}
+
+li a:hover {
+    
+    color: white;
+}
+li{
+display: inline;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Single_list(Insertion)</title>
+</head>
+<body background="wallpaper.png">
+    
+    <center>
+	    <h1> <br>INSERTION</h1><br><br>
+    </center>  
+
+<pre>
+<h2>     Adding a new node in linked list is a more than one step activity.We shall learn this with diagrams:
+
+First, create a node using the same structure and find the location where it has to be inserted.
+
+<center><img src="C:\Users\hp\Desktop\final\single list\linked_list_insertion_0.jpg" alt="first image"></center>
+Imagine that we are inserting a node B (NewNode), between A (LeftNode) and C (RightNode).
+Then point B.next to C.
+It should look like this −
+
+<center><img src="C:\Users\hp\Desktop\final\single list\linked_list_insertion_1.jpg" alt="first image">
+NewNode.next −> RightNode;</center>
+
+Now, the next node at the left should point to the new node.
+
+<center><img src="C:\Users\hp\Desktop\final\single list\linked_list_insertion_2.jpg" alt="first image">
+LeftNode.next −> NewNode;</center>
+
+This will put the new node in the middle of the two. The new list should look like this −
+
+<center><img src="C:\Users\hp\Desktop\final\single list\linked_list_insertion_3.jpg" alt="first image"></center>
+Similar steps should be taken if the node is being inserted at the beginning of the list.
+While inserting it at the end, the second last node of the list should point to the new node
+and the new node will point to NULL.</h2>
+
+<h1>C++ Implementation For Insertion:</h1>
+<h2>
+node* list::create()
+{
+	node* newnode= new node;
+	cout<<"\n Enter the value: ";
+	cin>>newnode->data;
+	newnode->next=NULL;
+	return newnode;
+}
+
+void list::insert_beg()
+{
+	node* temp=create();
+	if(head==NULL)
+	{
+		head=temp;
+	}
+	else
+	{
+		temp->next=head;
+		head=temp;
+	}
+}
+
+void list::insert_end()
+{
+	node *temp= create();
+	node *ptr;
+	if(head==NULL)
+	{
+		head=temp;
+	}
+	else
+	{
+
+		ptr=head;
+		while(ptr->next!=NULL)
+		{
+			ptr=ptr->next;
+		}
+		ptr->next=temp;
+	}
+}
+
+void list::insert_pos()
+{
+	node *temp=create();
+	node *ptr;
+	int pos;
+	if(head==NULL)
+	{
+		head=temp;
+	}
+	else
+	{
+		cout<<"Enter the position: " ;
+		cin>>pos;
+		ptr=head;
+		for(int i=1;i< pos-1;i++)
+		{
+			 ptr=ptr->next;
+		}
+		temp->next=ptr->next;
+		ptr->next=temp;
+	}
+
+}
+</h2>
+</pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circular_list(deletion)</title>
+</head>
+<body background="wallpaper.png">
+    
+    <center>
+	    <h1> <br>DELETION</h1><br>
+    </center>  
+<pre><h2>
+Following code demonstrates the deletion operation in a circular linked list based on single linked list:
+
+//delete first item
+	struct node * deleteFirst() 
+	{
+   		//save reference to first link
+  		 struct node *tempLink = head;
+	
+   		if(head->next == head)
+   		{  
+     		 head = NULL;
+      		 return tempLink;
+   		}     
+
+   		//mark next to first link as first 
+   		head = head->next;
+		
+   		//return the deleted link
+   		return tempLink;
+	}    
+</h2>
+</pre>
+</body>
+</html>

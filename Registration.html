@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+    <script src="Reg.js"></script>
+	<link rel="stylesheet" type="text/css" href="Registration.css">
+	<script src="js/pouchdb-7.0.0.min.js"></script>
+
+</head>
+<body background="comp.jpg">
+<div class="div1">
+<ul class="l1">
+<li><a href="index.html">Home</a></li>
+<li><a href="About_us.html">About</a></li>
+<li><a href="Registration.html">Sign Up</a></li>
+</ul>
+</div>
+<br><br>
+
+<div>
+	<form  method="GET" name="myForm">
+		<h1 align="center">REGISTRATION FORM</h1>
+<table align="center">
+<tr>	
+	<td><label> Name :</label></td>
+<td><input type="text" name="name" placeholder="Enter Name" id="name"></td>
+</tr>
+<tr>
+<td><label>E-mail:</label></td>
+<td><input type="text" name="email" placeholder="Enter E-mail" id="email"></td>
+</tr>
+<tr>
+<td><label>Contact:</label></td>
+<td><input type="text" name="cont" placeholder="Enter Contact" id="cont" maxlength="10"></td>
+</tr>
+<tr>
+<td><label>Username:</label><br></td>
+
+<td><input type="text" name="user" placeholder="Enter Username" id="user"></td>
+</tr>
+<tr>
+<td><label>Password:</label></td>
+<td><input type="password" name="pass" id="pass" placeholder="Enter Password"></td>
+</tr>
+<tr>
+<td><label>Confirm Password:</label></td>
+<td><input type="password" name="confirm" id="confirm" placeholder="Enter Password Again"></td>
+</tr>
+<tr>
+<td align="center" colspan="2"><input type="button" value="Register" onclick="check(); validateForm(); ValidatePass();"></td>
+</tr>
+</table>
+</div>
+
+</form>
+</body>
+</html>
